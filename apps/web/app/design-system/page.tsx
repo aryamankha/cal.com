@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import classNames from "@calcom/ui/classNames";
+import classNames from "classnames";
 
 const colorTokens = {
   background: {

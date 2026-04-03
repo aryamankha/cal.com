@@ -18695,6 +18695,7 @@ __metadata:
     "@vitest/ui": "npm:4.0.16"
     c8: "npm:7.13.0"
     checkly: "npm:latest"
+    classnames: "npm:^2.5.1"
     dotenv-checker: "npm:1.1.5"
     husky: "npm:9.1.7"
     i18n-unused: "npm:0.13.0"
