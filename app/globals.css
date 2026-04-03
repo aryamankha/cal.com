@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+/* ===== Cal.com Design System Tokens ===== */
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-cal: var(--font-cal-sans);
+
+  /* Border Radius */
+  --radius: 0.625rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Background Colors */
+  --color-cal-bg-emphasis: var(--cal-bg-emphasis);
+  --color-cal-bg: var(--cal-bg);
+  --color-cal-bg-subtle: var(--cal-bg-subtle);
+  --color-cal-bg-muted: var(--cal-bg-muted);
+  --color-cal-bg-inverted: var(--cal-bg-inverted);
+
+  /* Text Colors */
+  --color-cal-text-emphasis: var(--cal-text-emphasis);
+  --color-cal-text: var(--cal-text);
+  --color-cal-text-subtle: var(--cal-text-subtle);
+  --color-cal-text-muted: var(--cal-text-muted);
+  --color-cal-text-inverted: var(--cal-text-inverted);
+
+  /* Border Colors */
+  --color-cal-border-emphasis: var(--cal-border-emphasis);
+  --color-cal-border: var(--cal-border);
+  --color-cal-border-subtle: var(--cal-border-subtle);
+  --color-cal-border-muted: var(--cal-border-muted);
+
+  /* Brand Colors */
+  --color-cal-brand: var(--cal-brand);
+  --color-cal-brand-emphasis: var(--cal-brand-emphasis);
+  --color-cal-brand-text: var(--cal-brand-text);
+
+  /* Semantic Colors */
+  --color-cal-success: var(--cal-bg-success);
+  --color-cal-success-text: var(--cal-text-success);
+  --color-cal-error: var(--cal-bg-error);
+  --color-cal-error-text: var(--cal-text-error);
+  --color-cal-attention: var(--cal-bg-attention);
+  --color-cal-attention-text: var(--cal-text-attention);
+  --color-cal-info: var(--cal-bg-info);
+  --color-cal-info-text: var(--cal-text-info);
+
+  /* Shadows */
+  --shadow-cal-dropdown: var(--shadow-dropdown);
+  --shadow-cal-elevation: var(--shadow-elevation-low);
+  --shadow-cal-outline-rested: var(--shadow-outline-gray-rested);
+  --shadow-cal-outline-hover: var(--shadow-outline-gray-hover);
+  --shadow-cal-outline-active: var(--shadow-outline-gray-active);
+  --shadow-cal-outline-focused: var(--shadow-outline-gray-focused);
+  --shadow-cal-brand-default: var(--shadow-button-solid-brand-default);
+  --shadow-cal-brand-hover: var(--shadow-button-solid-brand-hover);
+  --shadow-cal-brand-active: var(--shadow-button-solid-brand-active);
+
+  /* Animations */
+  --animate-fade-in-up: fade-in-up 600ms cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* ===== Light Theme (Default) ===== */
+:root {
+  /* Background Standard */
+  --cal-bg-emphasis: hsla(220, 13%, 91%, 1);
+  --cal-bg: hsla(0, 0%, 100%, 1);
+  --cal-bg-subtle: hsla(220, 14%, 94%, 1);
+  --cal-bg-muted: hsla(210, 20%, 97%, 1);
+  --cal-bg-inverted: hsla(210, 30%, 4%, 1);
+
+  /* Content/Text Standard */
+  --cal-text-emphasis: hsla(210, 30%, 4%, 1);
+  --cal-text: hsla(220, 6%, 25%, 1);
+  --cal-text-subtle: hsla(220, 9%, 46%, 1);
+  --cal-text-muted: hsla(218, 11%, 65%, 1);
+  --cal-text-inverted: hsla(0, 0%, 100%, 1);
+
+  /* Borders */
+  --cal-border-emphasis: hsla(218, 11%, 65%, 1);
+  --cal-border: hsla(216, 12%, 84%, 1);
+  --cal-border-subtle: hsla(220, 13%, 91%, 1);
+  --cal-border-muted: hsla(220, 14%, 94%, 1);
+
+  /* Brand */
+  --cal-brand: hsla(221, 39%, 11%, 1);
+  --cal-brand-emphasis: hsla(0, 0%, 6%, 1);
+  --cal-brand-text: hsla(0, 0%, 100%, 1);
+
+  /* Semantic */
+  --cal-bg-info: hsla(221, 91%, 93%, 1);
+  --cal-text-info: hsla(225, 57%, 33%, 1);
+  --cal-bg-success: hsla(142, 76%, 94%, 1);
+  --cal-text-success: hsla(144, 34%, 24%, 1);
+  --cal-bg-attention: hsla(33, 100%, 92%, 1);
+  --cal-text-attention: hsla(16, 62%, 28%, 1);
+  --cal-bg-error: hsla(3, 66%, 93%, 1);
+  --cal-text-error: hsla(0, 63%, 31%, 1);
+
+  /* Shadows */
+  --shadow-dropdown: 0px 5px 20px 0px rgba(0, 0, 0, 0.1), 0px 10px 40px 0px rgba(0, 0, 0, 0.03);
+  --shadow-elevation-low: 0px 1px 1px 0px rgba(0, 0, 0, 0.07), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+  --shadow-outline-gray-rested: 0px 2px 3px 0px rgba(0, 0, 0, 0.03), 0px 2px 2px -1px rgba(0, 0, 0, 0.03);
+  --shadow-outline-gray-hover: 0px 2px 3px 0px rgba(0, 0, 0, 0.03), 0px 2px 2px -1px rgba(0, 0, 0, 0.03);
+  --shadow-outline-gray-active: 0px 2px 1px 0px rgba(0, 0, 0, 0.05) inset;
+  --shadow-outline-gray-focused: 0px 0px 0px 1px rgba(255, 255, 255, 0.2), 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+  --shadow-button-solid-brand-default: 0px 2px 3px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 1px 4px 8px 0px rgba(0, 0, 0, 0.12), 0px 2px 0.4px 0px rgba(255, 255, 255, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.04) inset;
+  --shadow-button-solid-brand-hover: 0px 1px 1px 0px rgba(0, 0, 0, 0.1), 0px 2px 3px 0px rgba(0, 0, 0, 0.08), 1px 4px 8px 0px rgba(0, 0, 0, 0.12), 0px -3px 2px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 0.4px 0px rgba(255, 255, 255, 0.24) inset;
+  --shadow-button-solid-brand-active: 0px 3px 1px 0px rgba(0, 0, 0, 0.1) inset, 0px 0px 2px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* ===== Dark Theme ===== */
+.dark {
+  --cal-bg-emphasis: hsla(0, 0%, 25%, 1);
+  --cal-bg: hsla(0, 0%, 6%, 1);
+  --cal-bg-subtle: hsla(0, 0%, 15%, 1);
+  --cal-bg-muted: hsla(0, 0%, 9%, 1);
+  --cal-bg-inverted: hsla(0, 0%, 98%, 1);
+
+  --cal-text-emphasis: hsla(0, 0%, 98%, 1);
+  --cal-text: hsla(0, 0%, 83%, 1);
+  --cal-text-subtle: hsla(0, 0%, 64%, 1);
+  --cal-text-muted: hsla(0, 0%, 64%, 1);
+  --cal-text-inverted: hsla(0, 0%, 0%, 1);
+
+  --cal-border: hsla(0, 0%, 30%, 1);
+  --cal-border-muted: hsla(0, 0%, 9%, 1);
+  --cal-border-subtle: hsla(0, 0%, 15%, 1);
+  --cal-border-emphasis: hsla(0, 0%, 45%, 1);
+
+  --cal-brand: hsla(0, 0%, 100%, 1);
+  --cal-brand-emphasis: hsla(218, 11%, 65%, 1);
+  --cal-brand-text: hsla(0, 0%, 0%, 1);
+
+  --cal-bg-info: hsla(228, 56%, 33%, 1);
+  --cal-text-info: hsla(218, 83%, 93%, 1);
+  --cal-bg-success: hsla(133, 34%, 24%, 1);
+  --cal-text-success: hsla(134, 76%, 94%, 1);
+  --cal-bg-attention: hsla(16, 62%, 28%, 1);
+  --cal-text-attention: hsla(37, 86%, 92%, 1);
+  --cal-bg-error: hsla(2, 55%, 30%, 1);
+  --cal-text-error: hsla(3, 66%, 93%, 1);
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  body {
+    @apply bg-cal-bg text-cal-text antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    color: var(--cal-brand-text);
+    background: var(--cal-brand);
+  }
+}
+
+/* ===== Utility: no-scrollbar ===== */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
